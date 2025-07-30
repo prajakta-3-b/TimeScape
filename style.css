@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.4s ease;
+}
+
+body.light-theme {
+  background: linear-gradient(135deg, #e0f7fa, #e1bee7);
+  color: #2c3e50;
+}
+
+body.dark-theme {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 1rem;
+  text-align: center;
+}
+
+.project-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 2px;
+  color: inherit;
+}
+
+.clock {
+  position: relative;
+  width: 80vmin;
+  height: 80vmin;
+  border: 12px solid currentColor;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+.hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom;
+  transform: translate(-50%, 0) rotate(90deg);
+}
+
+.hour {
+  width: 8px;
+  height: 25%;
+  background-color: currentColor;
+  z-index: 3;
+}
+
+.minute {
+  width: 4px;
+  height: 35%;
+  background-color: currentColor;
+  z-index: 2;
+}
+
+.second {
+  width: 2px;
+  height: 45%;
+  background-color: red;
+  z-index: 1;
+}
+
+.center-dot {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background-color: red;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+
+.numbers {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.numbers span {
+  position: absolute;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transform: translate(-50%, -50%);
+}
+
+.ticks {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.ticks div {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 10px;
+  background-color: currentColor;
+  transform-origin: bottom;
+}
+
+.ticks .major {
+  height: 18px;
+  width: 3px;
+}
+
+.digital-time {
+  margin-top: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.date {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: inherit;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
